@@ -15,6 +15,8 @@ export const router = createBrowserRouter([
       {
         path: "/",
         Component: Home,
+        hydrateFallbackElement: <p>Loading.......</p>,
+        loader: () => fetch("/doctor.json"),
       },
       {
         path: "/my-bookings",
