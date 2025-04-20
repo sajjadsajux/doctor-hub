@@ -2,7 +2,7 @@ import React from "react";
 import { FaRegRegistered } from "react-icons/fa";
 
 const DoctorCard = ({ doctor }) => {
-  const { id, image, name, education, speciality, experience, registration_number, available } = doctor;
+  const { image, name, education, speciality, experience, registration_number, available } = doctor;
 
   return (
     <div className=" ">
