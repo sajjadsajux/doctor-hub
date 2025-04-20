@@ -3,6 +3,7 @@ import successdoctor from "../assets/success-doctor.png";
 import successpatienst from "../assets/success-patients.png";
 import successreview from "../assets/success-review.png";
 import successstaffs from "../assets/success-staffs.png";
+import CountUp from "react-countup";
 
 const Success = () => {
   return (
@@ -15,8 +16,10 @@ const Success = () => {
             <img src={successdoctor} alt="Shoes" />
           </figure>
           <div className="card-body space-y-5">
-            <h2 className="card-title font-extrabold text-5xl">199+</h2>
-            <p className="text-3xl font-semibold text-gray-500">Total Doctors</p>
+            <h2 className="card-title font-extrabold text-5xl">
+              <CountUp end={199} suffix="+" duration={10} />
+            </h2>
+            <p className="text-3xl font-semibold text-gray-500 text-start">Total Doctors</p>
           </div>
         </div>
         <div className="card bg-white m-2 shadow-sm py-8 pl-10 rounded-3xl">
@@ -24,8 +27,10 @@ const Success = () => {
             <img src={successreview} alt="Shoes" />
           </figure>
           <div className="card-body space-y-5">
-            <h2 className="card-title font-extrabold text-5xl">467+</h2>
-            <p className="text-3xl font-semibold text-gray-500">Total Reviews</p>
+            <h2 className="card-title font-extrabold text-5xl">
+              <CountUp end={467} suffix="+" duration={10} />
+            </h2>
+            <p className="text-3xl font-semibold text-gray-500 text-start">Total Reviews</p>
           </div>
         </div>
         <div className="card bg-white m-2 shadow-sm py-8 pl-10 rounded-3xl">
@@ -33,8 +38,10 @@ const Success = () => {
             <img src={successpatienst} alt="Shoes" />
           </figure>
           <div className="card-body space-y-5">
-            <h2 className="card-title font-extrabold text-5xl">1900+</h2>
-            <p className="text-3xl font-semibold text-gray-500">Patients</p>
+            <h2 className="card-title font-extrabold text-5xl">
+              <CountUp end={1900} suffix="+" duration={10} />
+            </h2>
+            <p className="text-3xl font-semibold text-gray-500 text-start">Patients</p>
           </div>
         </div>
         <div className="card bg-white m-2 shadow-sm py-8 pl-10 rounded-3xl">
@@ -42,8 +49,10 @@ const Success = () => {
             <img src={successstaffs} alt="Shoes" />
           </figure>
           <div className="card-body space-y-5">
-            <h2 className="card-title font-extrabold text-5xl">300+</h2>
-            <p className="text-3xl font-semibold text-gray-500">Total Stuffs</p>
+            <h2 className="card-title font-extrabold text-5xl">
+              <CountUp end={300} suffix="+" duration={10} />
+            </h2>
+            <p className="text-3xl font-semibold text-gray-500 text-start">Total Stuffs</p>
           </div>
         </div>
       </div>
