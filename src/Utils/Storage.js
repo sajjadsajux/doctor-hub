@@ -8,11 +8,13 @@ export const addAppoinment = (doctor) => {
   const appoinments = getAppoinment();
   const isExist = appoinments.find((p) => p.id === doctor.id);
   if (isExist) {
-    return console.log("already added");
+    console.log("already added");
+    return false;
   }
   appoinments.push(doctor);
   console.log(doctor);
   localStorage.setItem("appoinments", JSON.stringify(appoinments));
+  return true;
 };
 
 export const removeAppoinment = (id) => {

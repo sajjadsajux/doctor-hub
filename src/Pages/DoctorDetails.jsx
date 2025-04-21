@@ -1,8 +1,9 @@
 import React from "react";
 import { FaRegRegistered } from "react-icons/fa";
-import { Link, useLoaderData, useParams } from "react-router";
+import { Link, useLoaderData, useNavigate, useParams } from "react-router";
 import { PiWarningCircleLight } from "react-icons/pi";
 import { addAppoinment } from "../Utils/Storage";
+import { Bounce, toast, ToastContainer } from "react-toastify";
 
 const DoctorDetails = () => {
   const data = useLoaderData();
@@ -10,8 +11,36 @@ const DoctorDetails = () => {
   const uniqueDoctor = data.find((doctor) => doctor.id === parseInt(id));
   console.log(uniqueDoctor);
   const { name, image, education, speciality, experience, registration_number, available, availability_dates, working_hospital, consultation_fee } = uniqueDoctor;
+  const navigate = useNavigate();
   const handleAppoinment = () => {
-    addAppoinment(uniqueDoctor);
+    const isAdded = addAppoinment(uniqueDoctor);
+    if (!isAdded) {
+      toast.error(`Your appointment with ${name} is Already scheduled for Today`, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        transition: Bounce,
+      });
+
+      return;
+    }
+    toast.success(`Thanks! Your appointment with ${name} is scheduled`, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
+    navigate("/my-bookings");
   };
   return (
     <div className="md:max-w-3/4 mx-auto mt-10">
@@ -71,7 +100,7 @@ const DoctorDetails = () => {
             <PiWarningCircleLight size={20} />
             Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.
           </p>
-          <Link to="/my-bookings">
+          <Link>
             <button onClick={handleAppoinment} className="btn bg-[#176AE5] text-white rounded-3xl p-5 w-full mt-8 text-xl">
               Book Appointment Now
             </button>
