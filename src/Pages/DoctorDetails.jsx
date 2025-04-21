@@ -1,7 +1,8 @@
 import React from "react";
 import { FaRegRegistered } from "react-icons/fa";
-import { useLoaderData, useParams } from "react-router";
+import { Link, useLoaderData, useParams } from "react-router";
 import { PiWarningCircleLight } from "react-icons/pi";
+import { addAppoinment } from "../Utils/Storage";
 
 const DoctorDetails = () => {
   const data = useLoaderData();
@@ -9,7 +10,9 @@ const DoctorDetails = () => {
   const uniqueDoctor = data.find((doctor) => doctor.id === parseInt(id));
   console.log(uniqueDoctor);
   const { name, image, education, speciality, experience, registration_number, available, availability_dates, working_hospital, consultation_fee } = uniqueDoctor;
-
+  const handleAppoinment = () => {
+    addAppoinment(uniqueDoctor);
+  };
   return (
     <div className="md:max-w-3/4 mx-auto mt-10">
       <div className="space-y-5 text-center bg-white rounded-3xl py-10">
@@ -64,11 +67,15 @@ const DoctorDetails = () => {
             <p className="badge badge-outline bg-orange-100 text-orange-500">Availability</p>
           </div>
           <hr className=" border border-t-2 border-gray-300 w-full mx-auto" />
-          <p className="badge  bg-orange-100 text-orange-500 flex text-start p-4 mt-10 rounded-2xl">
+          <p className="badge  bg-orange-100 text-orange-500 flex text-start p-4 mt-10 rounded-2xl ">
             <PiWarningCircleLight size={20} />
             Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.
           </p>
-          <button className="btn bg-[#176AE5] text-white rounded-3xl p-5 w-full mt-8 text-xl">Book Appointment Now</button>
+          <Link to="/my-bookings">
+            <button onClick={handleAppoinment} className="btn bg-[#176AE5] text-white rounded-3xl p-5 w-full mt-8 text-xl">
+              Book Appointment Now
+            </button>
+          </Link>
         </div>
       </div>
     </div>
