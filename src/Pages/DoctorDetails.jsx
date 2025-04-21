@@ -1,6 +1,7 @@
 import React from "react";
 import { FaRegRegistered } from "react-icons/fa";
 import { useLoaderData, useParams } from "react-router";
+import { PiWarningCircleLight } from "react-icons/pi";
 
 const DoctorDetails = () => {
   const data = useLoaderData();
@@ -24,7 +25,7 @@ const DoctorDetails = () => {
               <div className="md:w-1/3 mx-5 md:pl-7">
                 <img src={image} className=" rounded-lg  " />
               </div>
-              <div className="md:w-2/3 flex flex-col items-center md:items-start">
+              <div className="md:w-2/3 flex flex-col items-center md:items-start md:pr-10">
                 <h1 className="text-3xl font-bold mt-2 md:mt-0">{name}</h1>
                 <p className="py-1 text-gray-500 font-medium">{education}</p>
                 <p className="py-1 text-gray-500 font-medium">{speciality}</p>
@@ -51,6 +52,23 @@ const DoctorDetails = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      {/* appoinment sections */}
+      <div className="bg-white rounded-3xl py-10 my-10 text-center ">
+        <div className="md:p-10 space-y-5">
+          <h1 className="font-extrabold text-xl md:text-3xl">Doctor’s Profile Details</h1>
+          <hr className=" border-dashed border-t-2 border-gray-300 w-full mx-auto md:r-10" />
+          <div className="flex justify-between ">
+            <h3 className=" font-bold">Availability:</h3>
+            <p className="badge badge-outline bg-orange-100 text-orange-500">Availability</p>
+          </div>
+          <hr className=" border border-t-2 border-gray-300 w-full mx-auto" />
+          <p className="badge  bg-orange-100 text-orange-500 flex text-start p-4 mt-10 rounded-2xl">
+            <PiWarningCircleLight size={20} />
+            Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.
+          </p>
+          <button className="btn bg-[#176AE5] text-white rounded-3xl p-5 w-full mt-8 text-xl">Book Appointment Now</button>
         </div>
       </div>
     </div>
