@@ -3,9 +3,9 @@ import MainLayout from "../Layout/MainLayout";
 import Home from "../Pages/Home";
 import MyBookings from "../Pages/MyBookings";
 import ContactUs from "../Pages/ContactUs";
-import Blogs from "../Pages/Blogs";
 import ErrorPage from "../Pages/ErrorPage";
 import DoctorDetails from "../Pages/DoctorDetails";
+import Blogs from "../Pages/Blogs";
 
 export const router = createBrowserRouter([
   {
@@ -30,6 +30,8 @@ export const router = createBrowserRouter([
       {
         path: "/blogs",
         Component: Blogs,
+        hydrateFallbackElement: <p>Loading.......</p>,
+        loader: () => fetch("/blogs.json"),
       },
       {
         path: "/doctor-details/:id",

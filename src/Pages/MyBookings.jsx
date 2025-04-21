@@ -3,6 +3,7 @@ import { PiWarningCircleLight } from "react-icons/pi";
 import Appoinment from "../Components/Appoinment";
 import { getAppoinment, removeAppoinment } from "../Utils/Storage";
 import { Link } from "react-router";
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
 
 const MyBookings = () => {
   const [displayDoctor, setDisplayDoctor] = useState([]);

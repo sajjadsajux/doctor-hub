@@ -20,10 +20,10 @@ const Footer = () => {
           <NavLink to="/my-bookings" className={({ isActive }) => (isActive ? "text-decoration-line: underline text-blue-600  text-xl" : " text-xl text-gray-700")}>
             My-Bookings
           </NavLink>
-          <NavLink to="/contact-us" className={({ isActive }) => (isActive ? "text-decoration-line: underline text-blue-600  text-xl" : " text-xl text-gray-700")}>
+          <NavLink to="/blogs" className={({ isActive }) => (isActive ? "text-decoration-line: underline text-blue-600  text-xl" : " text-xl text-gray-700")}>
             Blogs
           </NavLink>
-          <NavLink to="/blogs" className={({ isActive }) => (isActive ? "text-decoration-line: underline text-blue-600  text-xl" : " text-xl text-gray-700")}>
+          <NavLink to="/contact-us" className={({ isActive }) => (isActive ? "text-decoration-line: underline text-blue-600  text-xl" : " text-xl text-gray-700")}>
             Contact Us
           </NavLink>
         </ul>
