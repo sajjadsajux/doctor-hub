@@ -20,7 +20,7 @@ const Doctors = ({ doctors }) => {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 md:max-w-3/4 mx-auto gap-10 mt-10">
         {displayDoctor.map((doctor) => (
-          <DoctorCard doctor={doctor} key={doctor.id}></DoctorCard>
+          <DoctorCard doctors={doctors} doctor={doctor} key={doctor.id}></DoctorCard>
         ))}
       </div>
       <button

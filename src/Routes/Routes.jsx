@@ -5,6 +5,7 @@ import MyBookings from "../Pages/MyBookings";
 import ContactUs from "../Pages/ContactUs";
 import Blogs from "../Pages/Blogs";
 import ErrorPage from "../Pages/ErrorPage";
+import DoctorDetails from "../Pages/DoctorDetails";
 
 export const router = createBrowserRouter([
   {
@@ -29,6 +30,12 @@ export const router = createBrowserRouter([
       {
         path: "/blogs",
         Component: Blogs,
+      },
+      {
+        path: "/doctor-details/:id",
+        Component: DoctorDetails,
+        hydrateFallbackElement: <p>Loading.......</p>,
+        loader: () => fetch("/doctor.json"),
       },
     ],
   },
