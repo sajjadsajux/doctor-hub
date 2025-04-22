@@ -21,6 +21,9 @@ const DoctorDetails = () => {
   }
   console.log(uniqueDoctor);
   const { name, image, education, speciality, experience, registration_number, available, availability_dates, working_hospital, consultation_fee } = uniqueDoctor;
+
+  const today = new Date().toLocaleString("en-US", { weekday: "long" });
+  const availableornot = availability_dates?.includes(today);
   const handleAppoinment = () => {
     const isAdded = addAppoinment(uniqueDoctor);
     if (!isAdded) {
@@ -79,7 +82,7 @@ const DoctorDetails = () => {
                 <hr className="my-2 border-dashed border-t-2 border-gray-300 w-full mx-auto" />
                 <h3 className="py-1 font-bold text-center md:text-start flex flex-col md:flex-row justify-center items-center justify-items-center md:gap-5">
                   Availability:
-                  <div className="flex flex-wrap gap-2 ">
+                  <div className="flex flex-wrap gap-2  justify-center">
                     {availability_dates.map((date, index) => (
                       <span key={index} className="badge badge-outline bg-orange-100 text-orange-500">
                         {date}
@@ -102,7 +105,7 @@ const DoctorDetails = () => {
           <hr className=" border-dashed border-t-1 border-gray-300 w-full mx-auto md:r-10" />
           <div className="flex justify-between ">
             <h3 className=" font-bold">Availability:</h3>
-            <p className="badge badge-outline bg-orange-100 text-orange-500">Availability</p>
+            {availableornot ? <p className="badge badge-outline bg-green-100 text-green-500">Available</p> : <p className="badge badge-outline bg-red-100 text-red-500">Doctor is unavailable today</p>}
           </div>
           <hr className=" border border-t-1 border-gray-300 w-full mx-auto" />
           <p className="badge  bg-orange-100 text-orange-500 flex text-center p-4 mt-10 rounded-2xl ">

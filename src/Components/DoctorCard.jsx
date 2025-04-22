@@ -3,8 +3,9 @@ import { FaRegRegistered } from "react-icons/fa";
 import { Link } from "react-router";
 
 const DoctorCard = ({ doctor }) => {
-  const { id, image, name, education, speciality, experience, registration_number, available } = doctor;
-
+  const { id, image, name, education, speciality, experience, registration_number, available, availability_dates } = doctor;
+  const today = new Date().toLocaleString("en-US", { weekday: "long" });
+  const availableornot = availability_dates?.includes(today);
   return (
     <div className=" ">
       <div className="card bg-base-100 m-2 shadow-sm">
@@ -12,7 +13,7 @@ const DoctorCard = ({ doctor }) => {
           <img src={image} alt="Shoes" className="rounded-xl" />
         </figure>
         <div className="card-actions justify-start px-10 pt-5">
-          <div className="badge badge-outline bg-green-100 text-green-500">{available === true ? "Available" : "Not Available"}</div>
+          {availableornot ? <p className="badge badge-outline bg-green-100 text-green-500">Available</p> : <p className="badge badge-outline bg-red-100 text-red-500">Unavailable</p>}
           <div className="badge badge-outline bg-blue-100 text-blue-500">{experience}</div>
         </div>
 
@@ -26,7 +27,7 @@ const DoctorCard = ({ doctor }) => {
             <FaRegRegistered size={15} className="mr-2" /> Reg No: {registration_number}
           </p>
 
-          <div className="card-actions">
+          <div className=" ">
             <Link to={`doctor-details/${id}`}>
               <button className="btn btn-outline btn-info rounded-3xl w-full">View Details</button>
             </Link>

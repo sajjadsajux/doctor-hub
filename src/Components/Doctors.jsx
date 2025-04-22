@@ -14,7 +14,7 @@ const Doctors = ({ doctors }) => {
   console.log(doctors);
   return (
     <div className="text-center my-15 ">
-      <h1 className="font-extrabold text-xl md:text-4xl mb-5">Our Best Doctors{doctors.length}</h1>
+      <h1 className="font-extrabold text-xl md:text-4xl mb-5">Our Best Doctors</h1>
       <p>
         Our platform connects you with verified, experienced doctors across various specialties — all at your convenience. Whether it's a <br /> routine checkup or urgent consultation, book appointments in minutes and receive quality care you can trust.
       </p>

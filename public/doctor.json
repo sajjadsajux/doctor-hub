@@ -8,7 +8,7 @@
     "experience": "12+ Years Experience",
     "registration_number": "BMC-143256",
     "available": true,
-    "availability_dates": ["Monday", "Wednesday", "Friday"],
+    "availability_dates": ["Monday", "Wednesday", "Friday", "Thursday"],
     "working_hospital": "City Medical Center, Dhaka",
     "consultation_fee": 500
   },
@@ -21,7 +21,7 @@
     "experience": "10+ Years Experience",
     "registration_number": "BMC-156789",
     "available": true,
-    "availability_dates": ["Tuesday", "Thursday"],
+    "availability_dates": ["Tuesday", "Thursday", "Saturday", "Monday"],
     "working_hospital": "Hope Women's Clinic, Gulshan, Dhaka",
     "consultation_fee": 700
   },
@@ -34,9 +34,9 @@
     "experience": "15+ Years Experience",
     "registration_number": "BMC-128934",
     "available": true,
-    "availability_dates": ["Monday", "Thursday"],
+    "availability_dates": ["Monday", "Thursday", "Tuesday", "Saturday"],
     "working_hospital": "Heart Care Hospital, Dhanmondi, Dhaka",
-    "consultation_fee": 600
+    "consultation_fee": 1000
   },
   {
     "id": 4,
@@ -47,7 +47,7 @@
     "experience": "8+ Years Experience",
     "registration_number": "BMC-167890",
     "available": true,
-    "availability_dates": ["Tuesday", "Saturday"],
+    "availability_dates": ["Tuesday", "Saturday", "Thursday", "Friday"],
     "working_hospital": "Derma Health Clinic, Banani, Dhaka",
     "consultation_fee": 550
   },
@@ -60,7 +60,7 @@
     "experience": "13+ Years Experience",
     "registration_number": "BMC-172394",
     "available": true,
-    "availability_dates": ["Monday", "Friday"],
+    "availability_dates": ["Monday", "Friday", "Thursday", "Saturday"],
     "working_hospital": "Orthopedic Care Center, Mirpur, Dhaka",
     "consultation_fee": 800
   },
@@ -73,7 +73,7 @@
     "experience": "9+ Years Experience",
     "registration_number": "BMC-185634",
     "available": true,
-    "availability_dates": ["Monday", "Wednesday", "Friday"],
+    "availability_dates": ["Monday", "Wednesday", "Friday", "Sunday"],
     "working_hospital": "Kids Health Hospital, Uttara, Dhaka",
     "consultation_fee": 650
   },
@@ -86,9 +86,9 @@
     "experience": "11+ Years Experience",
     "registration_number": "BMC-192837",
     "available": true,
-    "availability_dates": ["Tuesday", "Thursday"],
+    "availability_dates": ["Tuesday", "Thursday", "Monday", "Saturday"],
     "working_hospital": "NeuroCare Clinic, Banani, Dhaka",
-    "consultation_fee": 700
+    "consultation_fee": 850
   },
   {
     "id": 8,
@@ -99,9 +99,9 @@
     "experience": "7+ Years Experience",
     "registration_number": "BMC-178345",
     "available": true,
-    "availability_dates": ["Monday", "Friday"],
+    "availability_dates": ["Monday", "Friday", "Wednesday", "Sunday"],
     "working_hospital": "MindCare Clinic, Mirpur, Dhaka",
-    "consultation_fee": 500
+    "consultation_fee": 600
   },
   {
     "id": 9,
@@ -112,7 +112,7 @@
     "experience": "14+ Years Experience",
     "registration_number": "BMC-165432",
     "available": true,
-    "availability_dates": ["Wednesday", "Saturday"],
+    "availability_dates": ["Wednesday", "Saturday", "Monday", "Thursday"],
     "working_hospital": "Kidney Care Hospital, Shyamoli, Dhaka",
     "consultation_fee": 750
   },
@@ -125,9 +125,9 @@
     "experience": "10+ Years Experience",
     "registration_number": "BMC-174903",
     "available": true,
-    "availability_dates": ["Tuesday", "Friday"],
+    "availability_dates": ["Tuesday", "Friday", "Sunday", "Wednesday"],
     "working_hospital": "ENT Clinic, Malibagh, Dhaka",
-    "consultation_fee": 600
+    "consultation_fee": 650
   },
   {
     "id": 11,
@@ -138,7 +138,7 @@
     "experience": "9+ Years Experience",
     "registration_number": "BMC-198302",
     "available": true,
-    "availability_dates": ["Wednesday", "Saturday"],
+    "availability_dates": ["Wednesday", "Saturday", "Monday", "Thursday"],
     "working_hospital": "Urology Center, Tejgaon, Dhaka",
     "consultation_fee": 550
   },
@@ -151,7 +151,7 @@
     "experience": "6+ Years Experience",
     "registration_number": "BMC-183920",
     "available": true,
-    "availability_dates": ["Monday", "Thursday"],
+    "availability_dates": ["Monday", "Thursday", "Tuesday", "Friday"],
     "working_hospital": "Vision Care Clinic, Gulshan, Dhaka",
     "consultation_fee": 400
   }
