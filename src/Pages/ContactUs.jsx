@@ -1,9 +1,10 @@
 import React from "react";
+import ErrorPage from "./ErrorPage";
 
 const ContactUs = () => {
   return (
     <div>
-      <h2>Contact</h2>
+      <ErrorPage></ErrorPage>
     </div>
   );
 };

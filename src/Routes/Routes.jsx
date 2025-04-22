@@ -6,6 +6,7 @@ import ContactUs from "../Pages/ContactUs";
 import ErrorPage from "../Pages/ErrorPage";
 import DoctorDetails from "../Pages/DoctorDetails";
 import Blogs from "../Pages/Blogs";
+import Loader from "../Components/Loader";
 
 export const router = createBrowserRouter([
   {
@@ -16,7 +17,7 @@ export const router = createBrowserRouter([
       {
         path: "/",
         Component: Home,
-        hydrateFallbackElement: <p>Loading.......</p>,
+        hydrateFallbackElement: <Loader></Loader>,
         loader: () => fetch("/doctor.json"),
       },
       {
@@ -30,13 +31,13 @@ export const router = createBrowserRouter([
       {
         path: "/blogs",
         Component: Blogs,
-        hydrateFallbackElement: <p>Loading.......</p>,
+        hydrateFallbackElement: <Loader></Loader>,
         loader: () => fetch("/blogs.json"),
       },
       {
         path: "/doctor-details/:id",
         Component: DoctorDetails,
-        hydrateFallbackElement: <p>Loading.......</p>,
+        hydrateFallbackElement: <Loader></Loader>,
         loader: () => fetch("/doctor.json"),
       },
     ],
