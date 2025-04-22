@@ -4,6 +4,7 @@ import Appoinment from "../Components/Appoinment";
 import { getAppoinment, removeAppoinment } from "../Utils/Storage";
 import { Link } from "react-router";
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
+import Charts from "../Components/Charts";
 
 const MyBookings = () => {
   const [displayDoctor, setDisplayDoctor] = useState([]);
@@ -15,6 +16,7 @@ const MyBookings = () => {
     removeAppoinment(id);
     setDisplayDoctor(getAppoinment());
   };
+
   return (
     <div>
       <div className="text-center ]">
@@ -30,6 +32,9 @@ const MyBookings = () => {
           </>
         ) : (
           <>
+            <div className="md:max-w-3/4 mx-auto px-2">
+              <Charts doctors={displayDoctor}></Charts>
+            </div>
             <h1 className="font-extrabold text-xl md:text-3xl mt-10 my-5">My Today Appointments</h1>
             <p>Our platform connects you with verified, experienced doctors across various specialties — all at your convenience.</p>
           </>
