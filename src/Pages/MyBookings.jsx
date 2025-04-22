@@ -5,6 +5,7 @@ import { getAppoinment, removeAppoinment } from "../Utils/Storage";
 import { Link } from "react-router";
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
 import Charts from "../Components/Charts";
+import { BookingTittle } from "../Utils/Titles";
 
 const MyBookings = () => {
   const [displayDoctor, setDisplayDoctor] = useState([]);
@@ -16,6 +17,7 @@ const MyBookings = () => {
     removeAppoinment(id);
     setDisplayDoctor(getAppoinment());
   };
+  BookingTittle();
 
   return (
     <div>

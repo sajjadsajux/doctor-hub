@@ -1,10 +1,9 @@
 import React from "react";
 import { PiWarningCircleLight } from "react-icons/pi";
 import { Link } from "react-router";
-import { removeAppoinment } from "../Utils/Storage";
 
 const Appoinment = ({ doctor, handleDelete }) => {
-  const { id, name, image, education, speciality, experience, registration_number, available, availability_dates, working_hospital, consultation_fee } = doctor;
+  const { id, name, education, speciality, consultation_fee } = doctor;
 
   return (
     <div>

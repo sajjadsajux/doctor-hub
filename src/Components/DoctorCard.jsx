@@ -3,7 +3,7 @@ import { FaRegRegistered } from "react-icons/fa";
 import { Link } from "react-router";
 
 const DoctorCard = ({ doctor }) => {
-  const { id, image, name, education, speciality, experience, registration_number, available, availability_dates } = doctor;
+  const { id, image, name, education, speciality, experience, registration_number, availability_dates } = doctor;
   const today = new Date().toLocaleString("en-US", { weekday: "long" });
   const availableornot = availability_dates?.includes(today);
   return (

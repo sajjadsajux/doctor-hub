@@ -5,6 +5,7 @@ import { PiWarningCircleLight } from "react-icons/pi";
 import { addAppoinment } from "../Utils/Storage";
 import { Bounce, toast, ToastContainer } from "react-toastify";
 import NoDoctorFound from "../Components/NoDoctorFound";
+import { DoctorTittle } from "../Utils/Titles";
 
 const DoctorDetails = () => {
   const data = useLoaderData();
@@ -20,8 +21,8 @@ const DoctorDetails = () => {
     );
   }
   console.log(uniqueDoctor);
-  const { name, image, education, speciality, experience, registration_number, available, availability_dates, working_hospital, consultation_fee } = uniqueDoctor;
-
+  const { name, image, education, speciality, registration_number, availability_dates, working_hospital, consultation_fee } = uniqueDoctor;
+  DoctorTittle(name);
   const today = new Date().toLocaleString("en-US", { weekday: "long" });
   const availableornot = availability_dates?.includes(today);
   const handleAppoinment = () => {
