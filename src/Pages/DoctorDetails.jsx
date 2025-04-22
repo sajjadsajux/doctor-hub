@@ -4,6 +4,7 @@ import { Link, useLoaderData, useNavigate, useParams } from "react-router";
 import { PiWarningCircleLight } from "react-icons/pi";
 import { addAppoinment } from "../Utils/Storage";
 import { Bounce, toast, ToastContainer } from "react-toastify";
+import NoDoctorFound from "../Components/NoDoctorFound";
 
 const DoctorDetails = () => {
   const data = useLoaderData();
@@ -13,8 +14,8 @@ const DoctorDetails = () => {
   const uniqueDoctor = data.find((doctor) => doctor.id === parseInt(id));
   if (!uniqueDoctor) {
     return (
-      <div>
-        <h1>Hello</h1>
+      <div className="p-2">
+        <NoDoctorFound></NoDoctorFound>
       </div>
     );
   }
