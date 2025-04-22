@@ -8,10 +8,18 @@ import { Bounce, toast, ToastContainer } from "react-toastify";
 const DoctorDetails = () => {
   const data = useLoaderData();
   const { id } = useParams();
+  const navigate = useNavigate();
+
   const uniqueDoctor = data.find((doctor) => doctor.id === parseInt(id));
+  if (!uniqueDoctor) {
+    return (
+      <div>
+        <h1>Hello</h1>
+      </div>
+    );
+  }
   console.log(uniqueDoctor);
   const { name, image, education, speciality, experience, registration_number, available, availability_dates, working_hospital, consultation_fee } = uniqueDoctor;
-  const navigate = useNavigate();
   const handleAppoinment = () => {
     const isAdded = addAppoinment(uniqueDoctor);
     if (!isAdded) {

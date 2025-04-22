@@ -24,10 +24,7 @@ export const router = createBrowserRouter([
         path: "/my-bookings",
         Component: MyBookings,
       },
-      {
-        path: "/contact-us",
-        Component: ContactUs,
-      },
+
       {
         path: "/blogs",
         Component: Blogs,
@@ -41,5 +38,9 @@ export const router = createBrowserRouter([
         loader: () => fetch("/doctor.json"),
       },
     ],
+  },
+  {
+    path: "/contact-us",
+    Component: ErrorPage,
   },
 ]);
