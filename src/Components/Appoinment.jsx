@@ -9,9 +9,9 @@ const Appoinment = ({ doctor, handleDelete }) => {
     <div className="my-10">
       <div className="bg-white rounded-3xl py-5 my-5 md:max-w-3/4 w-full mx-auto">
         <div className="md:p-10 space-y-5 p-5 w-full ">
-          <div className="flex justify-between items-center  flex-col md:flex-row">
+          <div className="flex justify-between items-center  flex-col lg:flex-row">
             <div className="flex flex-col ">
-              <h1 className="font-semibold text-xl md:text-3xl md:text-left">{name}</h1>
+              <h1 className="font-semibold text-xl md:text-3xl lg:text-left">{name}</h1>
 
               <p className="text-gray-500 text-sm md:text-xl">
                 {education}- {speciality}

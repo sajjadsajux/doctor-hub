@@ -10,7 +10,7 @@ const Blogs = () => {
       <h1 className="font-extrabold text-xl md:text-4xl my-10">Blogs </h1>
       <p className="text-xl text-gray-600 my-10">Let's Explore Some Basics Concepts That Will Make You a Good Developer</p>
 
-      <div>
+      <div className="px-2">
         {blogdata.map((blog, index) => (
           <Blog key={index} blog={blog}></Blog>
         ))}

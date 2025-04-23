@@ -18,7 +18,7 @@ const Doctors = ({ doctors }) => {
       <p>
         Our platform connects you with verified, experienced doctors across various specialties — all at your convenience. Whether it's a <br /> routine checkup or urgent consultation, book appointments in minutes and receive quality care you can trust.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:max-w-3/4 mx-auto gap-10 mt-10 px-2">
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 md:max-w-3/4 mx-auto gap-10 mt-10 px-2 ">
         {displayDoctor.map((doctor) => (
           <DoctorCard doctors={doctors} doctor={doctor} key={doctor.id}></DoctorCard>
         ))}
