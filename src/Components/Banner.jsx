@@ -7,7 +7,7 @@ const Banner = () => {
     <div className=" border-3 border-white rounded-3xl text-center max-w-[95%]  mx-auto bg-gradient-to-b from-gray-100 to-white">
       <div className="w-5/6 mx-auto py-20">
         <div className="space-y-5">
-          <h1 className="font-extrabold text-2xl md:text-5xl">
+          <h1 className="font-extrabold text-2xl md:text-4xl">
             Dependable Care, Backed by Trusted <br className="hidden md:block" /> Professionals.
           </h1>
           <p>
@@ -18,7 +18,7 @@ const Banner = () => {
           <input type="text" placeholder="Search any doctor..." className="bg-white rounded-3xl p-2 md:w-2/5" />
           <button className="btn bg-[#176AE5] text-white rounded-3xl font-bold ">Search Now</button>
         </div>
-        <div className="md:flex space-y-5 md:space-y-0 items-center justify-center gap-10">
+        <div className="lg:flex space-y-5 md:space-y-2 items-center justify-center gap-10">
           <img src={banner} alt="" className="" />
           <img src={banner2} alt="" className=" rounded-2xl" />
         </div>

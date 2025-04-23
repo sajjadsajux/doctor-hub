@@ -46,10 +46,10 @@ const MyBookings = () => {
           </>
         ) : (
           <>
-            <div className="md:max-w-3/4 mx-auto px-2">
+            <div className="md:max-w-3/4 mx-auto px-2 ">
               <Charts doctors={displayDoctor}></Charts>
             </div>
-            <h1 className="font-extrabold text-xl md:text-3xl mt-10 my-5">My Today Appointments</h1>
+            <h1 className="font-extrabold text-xl md:text-3xl mt-20 my-5">My Today Appointments</h1>
             <p>Our platform connects you with verified, experienced doctors across various specialties — all at your convenience.</p>
           </>
         )}

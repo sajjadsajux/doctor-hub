@@ -6,7 +6,7 @@ const Appoinment = ({ doctor, handleDelete }) => {
   const { id, name, education, speciality, consultation_fee } = doctor;
 
   return (
-    <div>
+    <div className="my-10">
       <div className="bg-white rounded-3xl py-5 my-5 md:max-w-3/4 w-full mx-auto">
         <div className="md:p-10 space-y-5 p-5 w-full ">
           <div className="flex justify-between items-center  flex-col md:flex-row">

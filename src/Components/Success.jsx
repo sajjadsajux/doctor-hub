@@ -8,9 +8,9 @@ import CountUp from "react-countup";
 const Success = () => {
   return (
     <div className="text-center my-20">
-      <h1 className="font-extrabold text-xl md:text-4xl mb-5">We Provide Best Medical Services</h1>
+      <h1 className="font-extrabold text-xl md:text-3xl mb-5">We Provide Best Medical Services</h1>
       <p>Trusted by thousands — expert doctors, happy patients, and a dedicated team delivering top-quality care.</p>
-      <div className="grid grid-cols-1  md:grid-cols-4 md:max-w-3/4 mx-auto gap-20 mt-8">
+      <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 md:max-w-3/4 mx-auto gap-20 mt-8">
         <div className="card bg-white m-2 shadow-sm py-8 pl-10 rounded-3xl ">
           <figure className="w-2/5 h-16">
             <img src={successdoctor} alt="Shoes" />
