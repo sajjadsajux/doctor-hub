@@ -18,7 +18,7 @@ const Appoinment = ({ doctor, handleDelete }) => {
               </p>
             </div>
             <div>
-              <p className="text-gray-500 text-sm md:text-xl">Appointment Fee : {consultation_fee} + Vat</p>
+              <p className="text-gray-500 text-sm md:text-xl">Appointment Fee : {consultation_fee} Taka + Vat</p>
             </div>
           </div>
           <hr className=" border-dashed border-t-2 border-gray-300 w-full mx-auto" />

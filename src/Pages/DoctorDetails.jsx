@@ -58,7 +58,7 @@ const DoctorDetails = () => {
   return (
     <div className="md:max-w-3/4 mx-auto mt-10">
       <div className="space-y-5 text-center bg-white rounded-3xl py-10">
-        <h1 className="font-extrabold text-xl md:text-5xl">Doctor’s Profile Details</h1>
+        <h1 className="font-extrabold text-xl md:text-4xl">Doctor’s Profile Details</h1>
         <p>
           Explore detailed profiles of trusted doctors including their education, specialties, experience, working hospitals, and available days. <br /> Find the right doctor for your needs and book your consultation with ease.
         </p>
@@ -100,13 +100,13 @@ const DoctorDetails = () => {
         </div>
       </div>
       {/* appoinment sections */}
-      <div className="bg-white rounded-3xl py-10 my-10 text-center ">
+      <div className="bg-white rounded-3xl py-5 my-10 text-center ">
         <div className="md:p-10 space-y-3">
           <h1 className="font-extrabold text-xl md:text-3xl">Book an Appointment</h1>
           <hr className=" border-dashed border-t-1 border-gray-300 w-full mx-auto md:r-10" />
           <div className="flex justify-between ">
             <h3 className=" font-bold">Availability:</h3>
-            {availableornot ? <p className="badge badge-outline bg-green-100 text-green-500">Available</p> : <p className="badge badge-outline bg-red-100 text-red-500">Doctor is unavailable today</p>}
+            {availableornot ? <p className="badge badge-outline bg-green-100 text-green-500">Doctor Available today</p> : <p className="badge badge-outline bg-red-100 text-red-500">Doctor is unavailable today</p>}
           </div>
           <hr className=" border border-t-1 border-gray-300 w-full mx-auto" />
           <p className="badge  bg-orange-100 text-orange-500 flex text-center p-4 mt-10 rounded-2xl ">

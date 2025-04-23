@@ -28,7 +28,7 @@ const Footer = () => {
           </NavLink>
         </ul>
       </div>
-      <hr className="my-2 border-t-1 border-gray-300 w-3/4 mx-auto" />
+      <hr className="my-1 border-t-1 border-gray-300 w-3/4 mx-auto" />
 
       <nav>
         <div className="grid grid-flow-col gap-4">
