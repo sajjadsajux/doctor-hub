@@ -32,16 +32,16 @@ const Footer = () => {
 
       <nav>
         <div className="grid grid-flow-col gap-4">
-          <a href="https://www.facebook.com/" target="_blank">
+          <a href="https://www.facebook.com/sajjadsajux" target="_blank">
             <img src={fb} alt="" />
           </a>
-          <a href="https://twitter.com/" target="_blank">
+          <a href="https://x.com/sajjadsajux" target="_blank">
             <img src={twitter} alt="" />
           </a>
-          <a href="https://www.linkedin.com/" target="_blank">
+          <a href="https://www.linkedin.com/in/sajjadsaju/" target="_blank">
             <img src={linked} alt="" />
           </a>
-          <a href="https://www.youtube.com/" target="_blank">
+          <a href="https://www.youtube.com/@sajjadsajux" target="_blank">
             <img src={yt} alt="" />
           </a>
         </div>
