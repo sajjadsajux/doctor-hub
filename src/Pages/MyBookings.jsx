@@ -6,6 +6,7 @@ import { Link } from "react-router";
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
 import Charts from "../Components/Charts";
 import { BookingTittle } from "../Utils/Titles";
+import { Bounce, toast } from "react-toastify";
 
 const MyBookings = () => {
   const [displayDoctor, setDisplayDoctor] = useState([]);
@@ -16,6 +17,17 @@ const MyBookings = () => {
   const handleDelete = (id) => {
     removeAppoinment(id);
     setDisplayDoctor(getAppoinment());
+    toast.error("Your appointment has been cancelled", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      transition: Bounce,
+    });
   };
   BookingTittle();
 

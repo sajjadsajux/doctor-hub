@@ -15,6 +15,8 @@ export const DoctorTittle = (doctorName) => {
   useEffect(() => {
     if (location.pathname.includes(`/doctor-details/`)) {
       document.title = doctorName || "Doctor Details";
+    } else {
+      document.title = "Your Default Title";
     }
   }, [location.pathname, doctorName]);
 };
