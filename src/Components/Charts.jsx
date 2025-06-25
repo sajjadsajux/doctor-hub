@@ -19,6 +19,8 @@ const Charts = ({ doctors }) => {
   // const { consultation_fee, name } = doctors;
   // const chartData = [doctor];
   // console.log(doctor);
+  // dkd
+  // dfdfdjfjdj
   return (
     <div className=" py-5 h-[40vh] overflow-x-auto mt-10 bg-white rounded-3xl">
       <ResponsiveContainer width="100%" height="100%">
